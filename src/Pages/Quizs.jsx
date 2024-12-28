@@ -1,7 +1,11 @@
 import React from "react";
+import Navbar from "../Components/Navbar";
 
 const Quiz = () => {
-  return <div></div>;
+  const page = "Quizs"
+  return <div>
+    <Navbar />
+  </div>;
 };
 
 export default Quiz;

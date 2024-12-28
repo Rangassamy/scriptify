@@ -1,37 +1,39 @@
 @font-face {
   font-family: "font-1";
-  src: url(../assets/fonts/Dongle-Regular.ttf);
+  src: url(../Assets/Fonts/mokoto-mokoto-regular-400.ttf);
 }
+
 @font-face {
   font-family: "font-2";
-  src: url(../assets/fonts/Dongle-Light.ttf);
+  src: url(../Assets/Fonts/CodecPro-Regular.ttf);
 }
 
-$font-1: "font-1", sans-serif;
-$font-2: "font-2", sans-serif;
-
-$color-1: #546fe4;
-$color-2: #212040;
-$color-3: rgb(100, 100, 100);
-$color-4: #060d2c;
-$color-5: rgb(238, 238, 238);
+$color-1: #101728;
+$color-2: #1f41bb;
+$color-3: #000000;
+$color-4: #7ed957;
+$color-5: #ff3c5f;
+$color-6: #ce6704;
+$color-7: #ffffff;
+$color-8: #fdd61a;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: $font-1;
+  font-family: "font-2";
 }
 
 body {
-  background: $color-2;
-  color: $white;
+  background: $color-1;
+  color: $color-7;
 }
 li {
   list-style: none;
+  
 }
-.result {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+
+a {
+  color: $color-7;
+  text-decoration: none;
 }

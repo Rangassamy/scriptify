@@ -1,0 +1,53 @@
+#Navbar {
+  display: flex;
+  height: 150px;
+  padding: 20px;
+
+  .leftpart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+
+    h1 {
+      margin-left: 20px;
+      font-family: "font-1";
+    }
+    img {
+      margin-left: 50px;
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+    }
+  }
+
+  .rightpart {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70%;
+    
+    
+
+    li {
+      margin-left: 40px;
+      
+      :hover {
+        transition: 0.2s;
+        background: $color-8;
+        color: $color-1;
+        padding: 15px 50px;
+      }
+      
+      a {
+        border: 2px solid $color-8;
+        color: $color-8;
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: 600;
+        padding: 15px 40px;
+        border-radius: 20px;
+      }
+    }
+  }
+}
