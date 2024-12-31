@@ -1,0 +1,275 @@
+#Home {
+  height: 760px;
+  .firstPart {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    width: 100%;
+    height: 70%;
+
+    .leftPart,
+    .rightPart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      :hover {
+        transition: 0.2s;
+        background: $color-8;
+        color: $color-1;
+        scale: 1.1;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 40px;
+        height: 80px;
+        width: 250px;
+        border: 2px solid $color-8;
+        border-radius: 50px;
+        color: $color-8;
+        text-decoration: none;
+        font-size: 2.1rem;
+        font-weight: 600;
+      }
+    }
+
+    .middlePart {
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+
+      .box {
+        position: relative;
+        #img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 155px;
+          object-fit: cover;
+        }
+
+        #arrow1 {
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(180deg);
+
+          width: 300px;
+        }
+        #arrow2 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 300px;
+        }
+
+        .circlePack1 {
+          .circle1 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            bottom: 160px;
+            right: 50px;
+            border-radius: 100%;
+            transform: translate(50%, -50%);
+            background-color: $color-7;
+          }
+          .circle2 {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            bottom: 170px;
+            right: 80px;
+            border-radius: 100%;
+            transform: translate(50%, -50%);
+            background-color: $color-7;
+          }
+          .circle3 {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            bottom: 185px;
+            right: 50px;
+            border-radius: 100%;
+            transform: translate(50%, -50%);
+            background-color: $color-7;
+          }
+        }
+        .circlePack2 {
+          .circle1 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 200px;
+            left: 60px;
+            border-radius: 100%;
+            transform: translate(50%, -50%);
+            background-color: $color-7;
+          }
+          .circle2 {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 230px;
+            left: 70px;
+            border-radius: 100%;
+            transform: translate(50%, -50%);
+            background-color: $color-7;
+          }
+          .circle3 {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 200px;
+            left: 10px;
+            border-radius: 100%;
+            transform: translate(50%, -50%);
+            background-color: $color-7;
+          }
+        }
+        .linePack1 {
+          .line1 {
+            position: absolute;
+            width: 70px;
+            height: 6px;
+            top: 230px;
+            right: 60px;
+            border-radius: 20px;
+            transform: translate(0%, -50%);
+            background-color: $color-7;
+            margin: 20px 0;
+          }
+
+          .line2 {
+            position: absolute;
+            width: 70px;
+            height: 6px;
+            top: 250px;
+            right: 60px;
+            border-radius: 20px;
+            transform: translate(0%, -50%);
+            background-color: $color-7;
+            margin: 20px 0;
+          }
+
+          .line3 {
+            position: absolute;
+            width: 70px;
+            height: 6px;
+            top: 270px;
+            right: 60px;
+            border-radius: 20px;
+            transform: translate(0%, -50%);
+            background-color: $color-7;
+            margin: 20px 0;
+          }
+          .line4 {
+            position: absolute;
+            width: 70px;
+            height: 6px;
+            top: 290px;
+            right: 60px;
+            border-radius: 20px;
+            transform: translate(0%, -50%);
+            background-color: $color-7;
+            margin: 20px 0;
+          }
+          .line5 {
+            position: absolute;
+            width: 70px;
+            height: 6px;
+            top: 310px;
+            right: 60px;
+            border-radius: 20px;
+            transform: translate(0%, -50%);
+            background-color: $color-7;
+            margin: 20px 0;
+          }
+        }
+
+        .linePack2 {
+          .line1 {
+            position: absolute;
+            width: 70px;
+            height: 6px;
+            bottom: 230px;
+            left: 60px;
+            border-radius: 20px;
+            transform: translate(0%, -50%);
+            background-color: $color-7;
+            margin: 20px 0;
+          }
+
+          .line2 {
+            position: absolute;
+            width: 70px;
+            height: 6px;
+            bottom: 250px;
+            left: 60px;
+            border-radius: 20px;
+            transform: translate(0%, -50%);
+            background-color: $color-7;
+            margin: 20px 0;
+          }
+
+          .line3 {
+            position: absolute;
+            width: 70px;
+            height: 6px;
+            bottom: 270px;
+            left: 60px;
+            border-radius: 20px;
+            transform: translate(0%, -50%);
+            background-color: $color-7;
+            margin: 20px 0;
+          }
+          .line4 {
+            position: absolute;
+            width: 70px;
+            height: 6px;
+            bottom: 290px;
+            left: 60px;
+            border-radius: 20px;
+            transform: translate(0%, -50%);
+            background-color: $color-7;
+            margin: 20px 0;
+          }
+          .line5 {
+            position: absolute;
+            width: 70px;
+            height: 6px;
+            bottom: 310px;
+            left: 60px;
+            border-radius: 20px;
+            transform: translate(0%, -50%);
+            background-color: $color-7;
+            margin: 20px 0;
+          }
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .secondPart {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+
+    h2 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 2rem;
+      color: $color-8;
+    }
+  }
+}
