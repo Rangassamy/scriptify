@@ -34,223 +34,232 @@
         font-weight: 600;
       }
     }
+    .middlePartContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .middlePart {
+        height: 50%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
 
-    .middlePart {
-      display: grid;
-      grid-template-columns: 20% 20% 20% 20% 20%;
-
-      .box {
-        position: relative;
-        #img {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 155px;
-          object-fit: cover;
-        }
-
-        #arrow1 {
-          position: absolute;
-          top: 45%;
-          left: 50%;
-          transform: translate(-50%, -50%) rotate(180deg);
-
-          width: 300px;
-        }
-        #arrow2 {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 300px;
-        }
-
-        .circlePack1 {
-          .circle1 {
+        .box {
+          padding: 10px;
+          position: relative;
+          #img {
             position: absolute;
-            width: 20px;
-            height: 20px;
-            bottom: 160px;
-            right: 50px;
-            border-radius: 100%;
-            transform: translate(50%, -50%);
-            background-color: $color-7;
-          }
-          .circle2 {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            bottom: 170px;
-            right: 80px;
-            border-radius: 100%;
-            transform: translate(50%, -50%);
-            background-color: $color-7;
-          }
-          .circle3 {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            bottom: 185px;
-            right: 50px;
-            border-radius: 100%;
-            transform: translate(50%, -50%);
-            background-color: $color-7;
-          }
-        }
-        .circlePack2 {
-          .circle1 {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            top: 200px;
-            left: 60px;
-            border-radius: 100%;
-            transform: translate(50%, -50%);
-            background-color: $color-7;
-          }
-          .circle2 {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            top: 230px;
-            left: 70px;
-            border-radius: 100%;
-            transform: translate(50%, -50%);
-            background-color: $color-7;
-          }
-          .circle3 {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            top: 200px;
-            left: 10px;
-            border-radius: 100%;
-            transform: translate(50%, -50%);
-            background-color: $color-7;
-          }
-        }
-        .linePack1 {
-          .line1 {
-            position: absolute;
-            width: 70px;
-            height: 6px;
-            top: 230px;
-            right: 60px;
-            border-radius: 20px;
-            transform: translate(0%, -50%);
-            background-color: $color-7;
-            margin: 20px 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
           }
 
-          .line2 {
+          #arrow1 {
             position: absolute;
-            width: 70px;
-            height: 6px;
-            top: 250px;
-            right: 60px;
-            border-radius: 20px;
-            transform: translate(0%, -50%);
-            background-color: $color-7;
-            margin: 20px 0;
+            top: 50%;
+            left: 50%;
+            font-size: 13rem;
+            transform: translate(-50%, -50%);
+            color: $color-8;
+          }
+          #arrow2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 13rem;
+            transform: translate(-50%, -50%);
+            color: $color-8;
           }
 
-          .line3 {
-            position: absolute;
-            width: 70px;
-            height: 6px;
-            top: 270px;
-            right: 60px;
-            border-radius: 20px;
-            transform: translate(0%, -50%);
-            background-color: $color-7;
-            margin: 20px 0;
+          .circlePack1 {
+            width: 100%;
+            height: 30%;
+            position: relative;
+            .circle1 {
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              bottom: 0%;
+              right: 15%;
+              border-radius: 100%;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
+            .circle2 {
+              position: absolute;
+              width: 40px;
+              height: 40px;
+              top: 70%;
+              right: 40%;
+              border-radius: 100%;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
+            .circle3 {
+              position: absolute;
+              width: 30px;
+              height: 30px;
+              top: 120%;
+              right: 10%;
+              border-radius: 100%;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
           }
-          .line4 {
-            position: absolute;
-            width: 70px;
-            height: 6px;
-            top: 290px;
-            right: 60px;
-            border-radius: 20px;
-            transform: translate(0%, -50%);
-            background-color: $color-7;
-            margin: 20px 0;
+          .circlePack2 {
+            width: 100%;
+            height: 30%;
+            position: relative;
+            .circle1 {
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              top: 20%;
+              right: 15%;
+              border-radius: 100%;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
+            .circle2 {
+              position: absolute;
+              width: 40px;
+              height: 40px;
+              bottom: 80%;
+              right: 40%;
+              border-radius: 100%;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
+            .circle3 {
+              position: absolute;
+              width: 30px;
+              height: 30px;
+              bottom: 100%;
+              right: 10%;
+              border-radius: 100%;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
           }
-          .line5 {
-            position: absolute;
-            width: 70px;
-            height: 6px;
-            top: 310px;
-            right: 60px;
-            border-radius: 20px;
-            transform: translate(0%, -50%);
-            background-color: $color-7;
-            margin: 20px 0;
-          }
-        }
+          .linePack1 {
+            width: 100%;
+            height: 70%;
+            position: relative;
+            .line1 {
+              position: absolute;
+              width: 60%;
+              height: 6px;
+              top: 60%;
+              left: 50%;
+              border-radius: 20px;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
 
-        .linePack2 {
-          .line1 {
-            position: absolute;
-            width: 70px;
-            height: 6px;
-            bottom: 230px;
-            left: 60px;
-            border-radius: 20px;
-            transform: translate(0%, -50%);
-            background-color: $color-7;
-            margin: 20px 0;
+            .line2 {
+              position: absolute;
+              width: 60%;
+              height: 6px;
+              top: 50%;
+              left: 50%;
+              border-radius: 20px;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
+
+            .line3 {
+              position: absolute;
+              width: 60%;
+              height: 6px;
+              top: 40%;
+              left: 50%;
+              border-radius: 20px;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
+            .line4 {
+              position: absolute;
+              width: 60%;
+              height: 6px;
+              top: 30%;
+              left: 50%;
+              border-radius: 20px;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
+            .line5 {
+              position: absolute;
+              width: 60%;
+              height: 6px;
+              top: 20%;
+              left: 50%;
+              border-radius: 20px;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
           }
 
-          .line2 {
-            position: absolute;
-            width: 70px;
-            height: 6px;
-            bottom: 250px;
-            left: 60px;
-            border-radius: 20px;
-            transform: translate(0%, -50%);
-            background-color: $color-7;
-            margin: 20px 0;
-          }
+          .linePack2 {
+            height: 70%;
+            width: 100%;
+            position: relative;
+            .line1 {
+              position: absolute;
+              width: 60%;
+              height: 6px;
+              bottom: 60%;
+              left: 50%;
+              border-radius: 20px;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
 
-          .line3 {
-            position: absolute;
-            width: 70px;
-            height: 6px;
-            bottom: 270px;
-            left: 60px;
-            border-radius: 20px;
-            transform: translate(0%, -50%);
-            background-color: $color-7;
-            margin: 20px 0;
+            .line2 {
+              position: absolute;
+              width: 60%;
+              height: 6px;
+              bottom: 50%;
+              left: 50%;
+              border-radius: 20px;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
+
+            .line3 {
+              position: absolute;
+              width: 60%;
+              height: 6px;
+              bottom: 40%;
+              left: 50%;
+              border-radius: 20px;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
+            .line4 {
+              position: absolute;
+              width: 60%;
+              height: 6px;
+              bottom: 30%;
+              left: 50%;
+              border-radius: 20px;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
+            .line5 {
+              position: absolute;
+              width: 60%;
+              height: 6px;
+              bottom: 20%;
+              left: 50%;
+              border-radius: 20px;
+              transform: translate(-50%, -50%);
+              background-color: $color-7;
+            }
           }
-          .line4 {
-            position: absolute;
-            width: 70px;
-            height: 6px;
-            bottom: 290px;
-            left: 60px;
-            border-radius: 20px;
-            transform: translate(0%, -50%);
-            background-color: $color-7;
-            margin: 20px 0;
+          img {
+            width: 100%;
           }
-          .line5 {
-            position: absolute;
-            width: 70px;
-            height: 6px;
-            bottom: 310px;
-            left: 60px;
-            border-radius: 20px;
-            transform: translate(0%, -50%);
-            background-color: $color-7;
-            margin: 20px 0;
-          }
-        }
-        img {
-          width: 100%;
         }
       }
     }
