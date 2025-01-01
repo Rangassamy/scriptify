@@ -1,18 +1,7 @@
 import React from "react";
 
-const Navbar = ({ page }) => {
-  if ((page = 1)) {
-    return (
-      <div id="Navbar">
-        <div className="leftpart">
-          <img src="./img/logo-js.png" alt="logo javascript" />
-          <a href="/">
-            <h1>Scriptify</h1>
-          </a>
-        </div>
-      </div>
-    );
-  }
+const Navbar = () => {
+ 
   return (
     <div id="Navbar">
       <div className="leftpart">

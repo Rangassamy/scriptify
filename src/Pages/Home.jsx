@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
+import NavbarHome from "../Components/NavbarHome";
 
 const Home = () => {
-  const page = 1;
+ 
   return (
     <div>
-      <Navbar key={page} />
+      <NavbarHome />
       <div id="Home">
         <div className="firstPart">
           <div className="leftPart">

@@ -27,10 +27,11 @@ $color-8: #fdd61a;
 body {
   background: $color-1;
   color: $color-7;
+  height: 100vh;
 }
+
 li {
   list-style: none;
-  
 }
 
 a {
