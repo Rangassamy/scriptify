@@ -7,7 +7,7 @@ const Projects = () => {
       <Navbar />
       <div className="projectsContainer">
         <div className="card">
-          <img src="./img/form-img.png" alt="formulaire image" />
+          <img src="./img/form-img.png" alt="formulaire-image" />
           <h2>formulaire</h2>
           <ul className="stareContainer">
             <i class="fa-solid fa-star"></i>
@@ -21,7 +21,7 @@ const Projects = () => {
           </a>
         </div>
         <div className="card">
-          <img src="./img/calculate-img.png" alt="calculatrice image" />
+          <img src="./img/calculate-img.png" alt="calculatrice-image" />
           <h2>Calculatrice</h2>
           <ul className="stareContainer">
             <i class="fa-solid fa-star"></i>
@@ -36,7 +36,7 @@ const Projects = () => {
           </a>
         </div>
         <div className="card">
-          <img src="./img/rock-paper-scissors.png" alt="chifoumi image" />
+          <img src="./img/rock-paper-scissors.png" alt="chifoumi-image" />
           <h2>Chifoumi</h2>
           <ul className="stareContainer">
             <i class="fa-solid fa-star"></i>
@@ -52,7 +52,7 @@ const Projects = () => {
           </a>
         </div>
         <div className="card">
-          <img src="./img/todolist-img.png" alt="todolist image" />
+          <img src="./img/todolist-img.png" alt="todolist-image" />
           <h2>Todolist</h2>
           <ul className="stareContainer">
             <i class="fa-solid fa-star"></i>

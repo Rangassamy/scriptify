@@ -29,6 +29,11 @@
     }
 
     .stareContainer {
+      :hover {
+        scale: 1.1;
+        transition: 0.2s;
+      }
+
       i {
         color: $color-8;
         font-size: 2rem;
@@ -45,15 +50,15 @@
       border-radius: 50px;
       border: 2px solid $color-7;
 
-      :hover {
-        font-size: 2.4rem;
-        transition: 0.2s;
-      }
-
       i {
         color: $color-7;
         font-size: 2rem;
       }
     }
   }
+}
+
+a:hover {
+  scale: 1.1;
+  transition: 0.2s;
 }
