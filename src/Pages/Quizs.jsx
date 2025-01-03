@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../Components/Navbar";
+import gsap from "gsap";
 
 const Quiz = () => {
+
+  useEffect(() => {
+    gsap.to(".card", {
+      y: 30,
+      repeat: -1,
+      yoyo: true,
+      duration: 1,
+      stagger: 0.2,
+    });
+  }, []);
+
+  // useEffect(() => {
+  //   gsap.to("#random", {
+  //     x: 30,
+  //     repeat: -1,
+  //     yoyo: true,
+  //     duration: 1,
+  //     stagger: 0.2,
+  //   });
+  // }, []);
+
   return (
     <div>
       <Navbar />
@@ -21,7 +43,7 @@ const Quiz = () => {
               <p>
                 Vous pouvez faire un test <i>aléatoirement</i> grâce à ce bouton
               </p>
-              <button>
+              <button id="random" >
                 <i class="fa-solid fa-shuffle"></i>
               </button>
             </div>

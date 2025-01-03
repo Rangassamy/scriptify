@@ -13,13 +13,57 @@ const Home = () => {
     });
   }, []);
 
+  useEffect(() => {
+    gsap.to(".circle", {
+      scale: 1.3,
+      repeat: -1,
+      yoyo: true,
+      duration: 1,
+      stagger: 1,
+    });
+  }, []);
+
+  useEffect(() => {
+    gsap.to("#arrow1", {
+      x: -15,
+      repeat: -1,
+      yoyo: true,
+      duration: 1,
+    });
+  }, []);
+
+  useEffect(() => {
+    gsap.to("#arrow2", {
+      x: 15,
+      repeat: -1,
+      yoyo: true,
+      duration: 1,
+    });
+  }, []);
+
+  useEffect(() => {
+      gsap.fromTo(
+        "#linkButton1",
+        { x: -500, ease: "power3.out" }, // État initial
+        { x: 0, duration: 5, ease: "power3.out" } // État final
+      );
+    }, []);
+
+    useEffect(() => {
+      gsap.fromTo(
+        "#linkButton2",
+        { x: 500, ease: "power3.out" }, // État initial
+        { x: 0, duration: 5, ease: "power3.out" } // État final
+      );
+    }, []);
+
   return (
     <div>
       <NavbarHome />
       <div id="Home">
         <div className="firstPart">
           <div className="leftPart">
-            <a href="/Quizs">Quizs</a>
+            <a id="linkButton1" href="/Quizs">Quizs</a>
           </div>
           <div className="middlePartContainer">
             <div className="middlePart">
@@ -63,7 +107,7 @@ const Home = () => {
             </div>
           </div>
           <div className="rightPart">
-            <a href="/Projects">Projects</a>
+            <a id="linkButton2" href="/Projects">Projects</a>
           </div>
         </div>
         <div className="secondPart">
