@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+
+#Quiz {
+    
+  .quiz-box {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    .quizContainer {
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      padding: 2rem;
+      border-radius: 10px;
+      
+
+      h1 {
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+
+        span,
+        i {
+          color: $color-8;
+        }
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      h3 {
+        color: $color-8;
+        font-size: 1.3rem;
+      }
+      p {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .choices {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+
+        button {
+          flex: 1 0 45%;
+          max-width: 200px;
+          height: 60px;
+          border-radius: 5px;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          background: #dfe4ea;
+          color: #2f3542;
+          font-weight: 600;
+          font-size: 1.1rem;
+          transition: background 0.3s, transform 0.1s;
+
+          &:hover {
+            background: $color-8;
+            color: #fff;
+            scale: 1.1;
+          }
+
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+      }
+
+      #progress {
+        font-size: 1.2rem;
+        color: $color-8;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

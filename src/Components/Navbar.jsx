@@ -1,19 +1,31 @@
-import React from "react";
-
+import React, { useEffect} from "react";
+import { Link } from "react-router-dom";
+import { gsap } from "gsap";
 const Navbar = () => {
- 
+  useEffect(() => {
+    gsap.fromTo(
+      "#brand",
+      { y: -150, ease: "power3.out" }, // État initial
+      { y: 0, duration: 5, ease: "power3.out" } // État final
+    );
+    gsap.fromTo(
+      "#logo",
+      { y: -150, ease: "power3.out" }, // État initial
+      { y: 0, duration: 5, ease: "power3.out" } // État final
+    );
+  }, []);
   return (
     <div id="Navbar">
       <div className="leftpart">
         <img src="./img/logo-js.png" alt="logo javascript" />
-        <a href="/">
+        <Link to="/">
           <h1>Scriptify</h1>
-        </a>
+        </Link>
       </div>
 
       <ul className="rightpart">
-        <a href="/Projects">Projects</a>
-        <a href="/Quizs">Quizs</a>
+        <Link to="/Projects">Projects</Link>
+        <Link to="/Quizs">Quizs</Link>
       </ul>
     </div>
   );

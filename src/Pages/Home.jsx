@@ -11,9 +11,6 @@ const Home = () => {
       duration: 1,
       stagger: 1,
     });
-  }, []);
-
-  useEffect(() => {
     gsap.to(".circle", {
       scale: 1.3,
       repeat: -1,
@@ -21,41 +18,29 @@ const Home = () => {
       duration: 1,
       stagger: 1,
     });
-  }, []);
-
-  useEffect(() => {
     gsap.to("#arrow1", {
       x: -15,
       repeat: -1,
       yoyo: true,
       duration: 1,
     });
-  }, []);
-
-  useEffect(() => {
     gsap.to("#arrow2", {
       x: 15,
       repeat: -1,
       yoyo: true,
       duration: 1,
     });
+    gsap.fromTo(
+      "#linkButton1",
+      { x: -500, ease: "power3.out" }, // État initial
+      { x: 0, duration: 5, ease: "power3.out" } // État final
+    );
+    gsap.fromTo(
+      "#linkButton2",
+      { x: 500, ease: "power3.out" }, // État initial
+      { x: 0, duration: 5, ease: "power3.out" } // État final
+    );
   }, []);
-
-  useEffect(() => {
-      gsap.fromTo(
-        "#linkButton1",
-        { x: -500, ease: "power3.out" }, // État initial
-        { x: 0, duration: 5, ease: "power3.out" } // État final
-      );
-    }, []);
-
-    useEffect(() => {
-      gsap.fromTo(
-        "#linkButton2",
-        { x: 500, ease: "power3.out" }, // État initial
-        { x: 0, duration: 5, ease: "power3.out" } // État final
-      );
-    }, []);
 
   return (
     <div>
@@ -63,7 +48,9 @@ const Home = () => {
       <div id="Home">
         <div className="firstPart">
           <div className="leftPart">
-            <a id="linkButton1" href="/Quizs">Quizs</a>
+            <a id="linkButton1" href="/Quizs">
+              Quizs
+            </a>
           </div>
           <div className="middlePartContainer">
             <div className="middlePart">
@@ -107,12 +94,14 @@ const Home = () => {
             </div>
           </div>
           <div className="rightPart">
-            <a id="linkButton2" href="/Projects">Projects</a>
+            <a id="linkButton2" href="/Projects">
+              Projects
+            </a>
           </div>
         </div>
         <div className="secondPart">
           <h2>Javascript,</h2>
-          <p>Le language le plus utilisé par les dévleoppeurs web.</p>
+          <p>Le langage le plus utilisé par les développeurs web.</p>
         </div>
       </div>
     </div>

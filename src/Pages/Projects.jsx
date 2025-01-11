@@ -20,7 +20,7 @@ const Projects = () => {
       <div className="projectsContainer">
         <div className="card">
           <img src="./img/form-img.png" alt="formulaire-image" />
-          <h2>formulaire</h2>
+          <h2>Formulaire</h2>
           <ul className="stareContainer">
             <i class="fa-solid fa-star"></i>
           </ul>
