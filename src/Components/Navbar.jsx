@@ -17,8 +17,8 @@ const Navbar = () => {
   return (
     <div id="Navbar">
       <div className="leftpart">
-        <img src="./img/logo-js.png" alt="logo javascript" />
-        <Link to="/">
+        <img src="./img/logo-js.png" alt="logo javascript" id="logo" />
+        <Link id="brand" to="/">
           <h1>Scriptify</h1>
         </Link>
       </div>
