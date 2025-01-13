@@ -8,6 +8,8 @@ const Quizs = () => {
   const [score, setScore] = useState(0);
   const [isQuizEnded, setIsQuizEnded] = useState(false);
   const [questions, setQuestions] = useState([]);
+  const [questionsTheme, setQuestionsTheme] = useState(0);
+  const [GlobalScore, setQuizGlobalScore] = useState(true);
 
   useEffect(() => {
     gsap.to(".card", {
@@ -19,10 +21,16 @@ const Quizs = () => {
     });
   }, []);
 
+  const getGlobalScore = () => {
+    setQuizGlobalScore(localStorage.getItem(1));
+    console.log(GlobalScore);
+  };
+
   const open = (theme) => {
     setIsActive(true);
 
     if (theme === 1) {
+      setQuestionsTheme(1);
       setQuestions([
         {
           question: "Quel métier est le plus souvent associé à JavaScript ?",
@@ -68,6 +76,7 @@ const Quizs = () => {
         },
       ]);
     } else if (theme === 2) {
+      setQuestionsTheme(2);
       setQuestions([
         {
           question: "En quelle année JavaScript a-t-il été créé ?",
@@ -101,6 +110,7 @@ const Quizs = () => {
         },
       ]);
     } else if (theme === 3) {
+      setQuestionsTheme(3);
       setQuestions([
         {
           question:
@@ -128,6 +138,7 @@ const Quizs = () => {
         },
       ]);
     } else if (theme === 4) {
+      setQuestionsTheme(4);
       setQuestions([
         {
           question: "Que retourne typeof NaN en JavaScript ?",
@@ -161,11 +172,14 @@ const Quizs = () => {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       setIsQuizEnded(true);
+      localStorage.setItem(questionsTheme, score);
+
       setTimeout(() => {
         setIsQuizEnded(false);
         setIsActive(false);
         setCurrentQuestionIndex(0);
         setScore(0);
+        getGlobalScore();
       }, 2000);
     }
   };
@@ -179,9 +193,13 @@ const Quizs = () => {
             <img src="./img/quiz-img.png" alt="quiz-img" />
             <div className="textContainer">
               <h2>Quiz</h2>
-              <p>
-                Veuillez <i>valider un test</i> pour connaître votre score.
-              </p>
+              {GlobalScore ? (
+                <p>votre score est de {GlobalScore} / 16</p>
+              ) : (
+                <p>
+                  Veuillez <i>valider un test</i> pour connaître votre score.
+                </p>
+              )}
             </div>
           </div>
           <div className="rightPart">
@@ -189,7 +207,10 @@ const Quizs = () => {
               <p>
                 Vous pouvez faire un test <i>aléatoirement</i> grâce à ce bouton
               </p>
-              <button onClick={() => open(Math.floor(Math.random() * 4) + 1)} id="random">
+              <button
+                onClick={() => open(Math.floor(Math.random() * 4) + 1)}
+                id="random"
+              >
                 <i class="fa-solid fa-shuffle"></i>
               </button>
             </div>
