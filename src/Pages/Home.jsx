@@ -49,7 +49,7 @@ const Home = () => {
         <div className="firstPart">
           <div className="leftPart">
             <a id="linkButton1" href="/Quizs">
-              Quizs
+              Quizzs
             </a>
           </div>
           <div className="middlePartContainer">

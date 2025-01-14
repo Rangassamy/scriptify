@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
-import gsap from "gsap";
+
 
 const Quizs = () => {
   const [isActive, setIsActive] = useState(false);
@@ -9,21 +9,21 @@ const Quizs = () => {
   const [isQuizEnded, setIsQuizEnded] = useState(false);
   const [questions, setQuestions] = useState([]);
   const [questionsTheme, setQuestionsTheme] = useState(0);
-  const [GlobalScore, setQuizGlobalScore] = useState(true);
 
+  const [firstquiz, setFirstQuiz] = useState(0);
+  const [secondquiz, setSecondQuiz] = useState(0);
+  const [thirdquiz, setThirdQuiz] = useState(0);
+  const [fourthquiz, setFourthQuiz] = useState(0);
   useEffect(() => {
-    gsap.to(".card", {
-      y: 30,
-      repeat: -1,
-      yoyo: true,
-      duration: 1,
-      stagger: 0.2,
-    });
+    getGlobalScore();
   }, []);
 
   const getGlobalScore = () => {
-    setQuizGlobalScore(localStorage.getItem(1));
-    console.log(GlobalScore);
+    // Convertir les valeurs en nombres après récupération
+    setFirstQuiz(Number(localStorage.getItem(1)) || 0);
+    setSecondQuiz(Number(localStorage.getItem(2)) || 0);
+    setThirdQuiz(Number(localStorage.getItem(3)) || 0);
+    setFourthQuiz(Number(localStorage.getItem(4)) || 0);
   };
 
   const open = (theme) => {
@@ -165,22 +165,28 @@ const Quizs = () => {
   };
 
   const handleChoice = (choice) => {
+    let newScore = score; // Stocker temporairement le score actuel.
+
     if (choice === questions[currentQuestionIndex].answer) {
-      setScore(score + 1);
+      newScore = score + 1; // Incrémenter le score.
+      setScore(newScore); // Mettre à jour l'état.
     }
+
     if (currentQuestionIndex + 1 < questions.length) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
+      // Fin du quiz
       setIsQuizEnded(true);
-      localStorage.setItem(questionsTheme, score);
 
+      // Utiliser le score mis à jour pour l'enregistrement
       setTimeout(() => {
+        localStorage.setItem(questionsTheme, newScore); // Utiliser newScore
         setIsQuizEnded(false);
         setIsActive(false);
         setCurrentQuestionIndex(0);
-        setScore(0);
         getGlobalScore();
-      }, 2000);
+        setScore(0); // Réinitialiser le score pour le prochain quiz
+      }, 1000);
     }
   };
 
@@ -193,13 +199,11 @@ const Quizs = () => {
             <img src="./img/quiz-img.png" alt="quiz-img" />
             <div className="textContainer">
               <h2>Quiz</h2>
-              {GlobalScore ? (
-                <p>votre score est de {GlobalScore} / 16</p>
-              ) : (
-                <p>
-                  Veuillez <i>valider un test</i> pour connaître votre score.
-                </p>
-              )}
+
+              <p>
+                Veuillez <i>valider un test</i> pour connaître votre score à
+                l'aide des barres de progrès !
+              </p>
             </div>
           </div>
           <div className="rightPart">
@@ -220,7 +224,24 @@ const Quizs = () => {
           <div className="card">
             <h2>Métiers possibles</h2>
             <p>cultures générales</p>
-            <div className="progressbar"></div>
+            <div className="progressbar">
+              <div
+                style={{
+                  width: `${(firstquiz / 4) * 100}%`,
+                  backgroundColor:
+                    firstquiz === 1
+                      ? "#ff3c5f"
+                      : firstquiz === 2
+                      ? "#ce6704"
+                      : firstquiz === 3
+                      ? "#fdd61a"
+                      : firstquiz === 3
+                      ? "#7ed957"
+                      : "ffffff",
+                }}
+                className="container"
+              ></div>
+            </div>
             <button onClick={() => open(1)} id="metiers">
               <i class="fa-solid fa-play"></i>
             </button>
@@ -228,7 +249,25 @@ const Quizs = () => {
           <div className="card">
             <h2>Généralités JavaScript</h2>
             <p>connaissances</p>
-            <div className="progressbar"></div>
+            <div className="progressbar">
+              {" "}
+              <div
+                style={{
+                  width: `${(secondquiz / 4) * 100}%`,
+                  backgroundColor:
+                    secondquiz === 1
+                      ? "#ff3c5f"
+                      : secondquiz === 2
+                      ? "#ce6704"
+                      : secondquiz === 3
+                      ? "#fdd61a"
+                      : secondquiz === 3
+                      ? "#7ed957"
+                      : "ffffff",
+                }}
+                className="container"
+              ></div>
+            </div>
             <button onClick={() => open(2)} id="connaissances">
               <i class="fa-solid fa-play"></i>
             </button>
@@ -236,7 +275,25 @@ const Quizs = () => {
           <div className="card">
             <h2>Outiles et technos</h2>
             <p>avantages</p>
-            <div className="progressbar"></div>
+            <div className="progressbar">
+              {" "}
+              <div
+                style={{
+                  width: `${(thirdquiz / 4) * 100}%`,
+                  backgroundColor:
+                    thirdquiz === 1
+                      ? "#ff3c5f"
+                      : thirdquiz === 2
+                      ? "#ce6704"
+                      : thirdquiz === 3
+                      ? "#fdd61a"
+                      : thirdquiz === 3
+                      ? "#7ed957"
+                      : "ffffff",
+                }}
+                className="container"
+              ></div>
+            </div>
             <button onClick={() => open(3)} id="outilsTechnos">
               <i class="fa-solid fa-play"></i>
             </button>
@@ -244,7 +301,25 @@ const Quizs = () => {
           <div className="card">
             <h2>Les bugs incompris</h2>
             <p>intéressant</p>
-            <div className="progressbar"></div>
+            <div className="progressbar">
+              {" "}
+              <div
+                style={{
+                  width: `${(fourthquiz / 4) * 100}%`,
+                  backgroundColor:
+                    fourthquiz === 1
+                      ? "#ff3c5f"
+                      : fourthquiz === 2
+                      ? "#ce6704"
+                      : fourthquiz === 3
+                      ? "#fdd61a"
+                      : fourthquiz === 3
+                      ? "#7ed957"
+                      : "ffffff",
+                }}
+                className="container"
+              ></div>
+            </div>
             <button onClick={() => open(4)} id="beugDrole">
               <i class="fa-solid fa-play"></i>
             </button>

@@ -1,19 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Navbar from "../Components/Navbar";
-import gsap from "gsap";
 
 const Projects = () => {
-
-  useEffect(() => {
-    gsap.to(".card", {
-      y: 30,
-      repeat: -1,
-      yoyo: true,
-      duration: 1,
-      stagger: 0.2,
-    });
-  }, []);
-
   return (
     <div>
       <Navbar />
