@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 
-
 const Quizs = () => {
   const [isActive, setIsActive] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -24,6 +23,14 @@ const Quizs = () => {
     setSecondQuiz(Number(localStorage.getItem(2)) || 0);
     setThirdQuiz(Number(localStorage.getItem(3)) || 0);
     setFourthQuiz(Number(localStorage.getItem(4)) || 0);
+  };
+
+  const reset = () => {
+    localStorage.setItem(1, 0); // Utiliser newScore
+    localStorage.setItem(2, 0); // Utiliser newScore
+    localStorage.setItem(3, 0); // Utiliser newScore
+    localStorage.setItem(4, 0); // Utiliser newScore
+    window.location.reload(); 
   };
 
   const open = (theme) => {
@@ -209,12 +216,9 @@ const Quizs = () => {
           <div className="rightPart">
             <div className="rightPartContainer">
               <p>
-                Vous pouvez faire un test <i>aléatoirement</i> grâce à ce bouton
+                Vous pouvez  <i>réinitialiser</i> vos quizzs grâce à ce bouton
               </p>
-              <button
-                onClick={() => open(Math.floor(Math.random() * 4) + 1)}
-                id="random"
-              >
+              <button onClick={() => reset()} id="random">
                 <i class="fa-solid fa-shuffle"></i>
               </button>
             </div>
