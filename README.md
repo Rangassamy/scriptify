@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Guide d'installation et de lancement de Scriptify
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ce guide explique comment installer et exécuter Scriptify, même si vous êtes débutant. Suivez ces étapes pour configurer votre environnement et faire fonctionner le site.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🖥️ 1. Installation de Visual Studio Code (VS Code)
 
-### `npm start`
+1. Rendez-vous sur le site officiel de VS Code : [https://code.visualstudio.com/](https://code.visualstudio.com/)
+2. Téléchargez la version correspondant à votre système d’exploitation (Windows, macOS ou Linux).
+3. Installez le logiciel en suivant les instructions affichées à l’écran.
+4. Une fois installé, ouvrez VS Code.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🔧 2. Installation de Node.js et npm
 
-### `npm test`
+1. Rendez-vous sur [https://nodejs.org/](https://nodejs.org/)
+2. Téléchargez la version **LTS (Long Term Support)** recommandée.
+3. Installez Node.js en suivant les instructions.
+4. Vérifiez l’installation en ouvrant un terminal (ou invite de commande) et en tapant :
+   ```sh
+   node -v
+   ```
+   Cela doit afficher la version installée de Node.js.
+5. Vérifiez également la présence de npm (gestionnaire de paquets) :
+   ```sh
+   npm -v
+   ```
+   Cela doit afficher la version de npm installée.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📂 3. Télécharger et ouvrir le projet
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Télécharger le projet manuellement** :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   - Rendez-vous sur le dépôt GitHub : [https://github.com/Rangassamy/scriptify](https://github.com/Rangassamy/scriptify)
+   - Cliquez sur le bouton "Code" puis sur "Download ZIP".
+   - Extrayez le fichier ZIP sur votre ordinateur.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Ouvrir le projet dans VS Code** :
+   - Dans VS Code, cliquez sur **Fichier > Ouvrir un dossier**.
+   - Sélectionnez le dossier `scriptify` téléchargé.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📦 4. Installer les dépendances
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Ouvrez un terminal dans VS Code (**Terminal > Nouveau terminal**).
+2. Assurez-vous d’être dans le dossier du projet (`scriptify`) :
+   ```sh
+   cd scriptify
+   ```
+3. Installez les dépendances nécessaires avec la commande :
+   ```sh
+   npm install
+   ```
+   Cette commande va télécharger et installer tous les modules nécessaires au fonctionnement du projet.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 5. Lancer le projet
 
-## Learn More
+1. Toujours dans le terminal, exécutez la commande :
+   ```sh
+   npm start
+   ```
+2. Après quelques secondes, le site s’ouvrira automatiquement dans votre navigateur à l’adresse :
+   ```
+   http://localhost:3000/
+   ```
+3. Vous pouvez maintenant explorer le site et tester ses fonctionnalités.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠 6. Résolution des problèmes courants
 
-### Code Splitting
+### **1. Commande `npm install` ou `npm start` ne fonctionne pas**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Assurez-vous que vous êtes bien dans le dossier du projet (`scriptify`).
+- Vérifiez que Node.js et npm sont bien installés avec `node -v` et `npm -v`.
 
-### Analyzing the Bundle Size
+### **2. Problème de port occupé**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Si le terminal indique qu’un autre service utilise le port 3000, essayez :
+  ```sh
+  npm start --port=3001
+  ```
 
-### Making a Progressive Web App
+### **3. Fichiers manquants**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Si des erreurs indiquent des fichiers manquants, supprimez le dossier `node_modules` et relancez :
+  ```sh
+  rm -rf node_modules package-lock.json
+  npm install
+  ```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Scriptify** est maintenant installé et fonctionnel ! 🎉
