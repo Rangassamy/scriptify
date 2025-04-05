@@ -30,7 +30,7 @@ const Quizs = () => {
     localStorage.setItem(2, 0); // Utiliser newScore
     localStorage.setItem(3, 0); // Utiliser newScore
     localStorage.setItem(4, 0); // Utiliser newScore
-    window.location.reload(); 
+    window.location.reload();
   };
 
   const open = (theme) => {
@@ -216,7 +216,7 @@ const Quizs = () => {
           <div className="rightPart">
             <div className="rightPartContainer">
               <p>
-                Vous pouvez  <i>réinitialiser</i> vos quizzs grâce à ce bouton
+                Vous pouvez <i>réinitialiser</i> vos quizzs grâce à ce bouton
               </p>
               <button onClick={() => reset()} id="random">
                 <i class="fa-solid fa-shuffle"></i>
@@ -239,7 +239,7 @@ const Quizs = () => {
                       ? "#ce6704"
                       : firstquiz === 3
                       ? "#fdd61a"
-                      : firstquiz === 3
+                      : firstquiz === 4
                       ? "#7ed957"
                       : "ffffff",
                 }}
