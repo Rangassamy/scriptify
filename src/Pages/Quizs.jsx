@@ -30,7 +30,7 @@ const Quizs = () => {
     localStorage.setItem(2, 0); // Utiliser newScore
     localStorage.setItem(3, 0); // Utiliser newScore
     localStorage.setItem(4, 0); // Utiliser newScore
-    window.location.reload();
+    getGlobalScore();
   };
 
   const open = (theme) => {
