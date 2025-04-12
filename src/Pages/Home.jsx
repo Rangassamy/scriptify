@@ -95,7 +95,7 @@ const Home = () => {
             </div>
           </div>
           <div className="rightPart">
-            <Link id="linkButton2" to="/Quizs">
+            <Link id="linkButton2" to="/Projects">
               Projects
             </Link>
           </div>
