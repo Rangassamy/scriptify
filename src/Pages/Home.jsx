@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import NavbarHome from "../Components/NavbarHome";
 import { gsap } from "gsap";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   useEffect(() => {
@@ -48,9 +49,9 @@ const Home = () => {
       <div id="Home">
         <div className="firstPart">
           <div className="leftPart">
-            <a id="linkButton1" href="/Quizs">
-              Quiz
-            </a>
+            <Link id="linkButton1" to="/Quizs">
+              Quizs
+            </Link>
           </div>
           <div className="middlePartContainer">
             <div className="middlePart">
@@ -94,9 +95,9 @@ const Home = () => {
             </div>
           </div>
           <div className="rightPart">
-            <a id="linkButton2" href="/Projects">
+            <Link id="linkButton2" to="/Quizs">
               Projects
-            </a>
+            </Link>
           </div>
         </div>
         <div className="secondPart">
